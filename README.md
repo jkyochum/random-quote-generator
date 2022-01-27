@@ -1,2 +1,1 @@
-# random-quote-generator
- output random quotes with javascript
+#Treehouse Project 4 - Random Quote Generator

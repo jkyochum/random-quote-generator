@@ -22,6 +22,11 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote(arr){
+  const randomNumber = Math.floor(Math.random() * arr.length);
+  return arr[randomNumber];
+}
+console.log(getRandomQuote(quotes));
 
 
 

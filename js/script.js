@@ -33,7 +33,30 @@ console.log(getRandomQuote(quotes));
 /***
  * `printQuote` function
 ***/
+function printQuote(){
+  const obj = getRandomQuote(quotes);
+  const quote = obj.quote;
+  const source = obj.source;
+  const citation = obj.citation;
+  const year = obj.year;
 
+  let html = `
+    <p class="quote">${quote}</p>
+    <p class="source">${source}
+  `;
+
+  if(quotes.citation){
+    source.insertAdjacentHTML(beforeend, `<span class="citation">${citation}</span>`);
+  }
+  if(quotes.year){
+    html += `<span class="year">${year}</span>`;
+  }
+
+  html += `</p>`;
+
+  document.getElementById('quote-box').innerHTML = html;
+
+}
 
 
 /***

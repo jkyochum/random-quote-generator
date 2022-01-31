@@ -26,7 +26,6 @@ function getRandomQuote(arr){
   const randomNumber = Math.floor(Math.random() * arr.length);
   return arr[randomNumber];
 }
-console.log(getRandomQuote(quotes));
 
 //function to change background color
 function changeColor(){
@@ -79,6 +78,13 @@ function printQuote(){
   //setting the string into the existing html
   document.getElementById('quote-box').innerHTML = html;
 }
+
+//set timer function to change every 10 seconds
+function setTimer(){
+  setInterval(printQuote, 10000);
+  setInterval(changeColor, 10000);
+}
+setTimer();
 
 
 /***
